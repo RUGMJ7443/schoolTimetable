@@ -1,0 +1,23 @@
+header {
+    color: bisque;
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

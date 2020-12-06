@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="This tool will help you remeber what classes and what things you need to bring into school"
+		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<title>School Timetable</title>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="./currentURL.js"></script>
+		<script src="./main.js"></script>
+		<link rel="stylesheet" href="./main.css" />
+		<script src="./footer.js"></script>
+		<script src="./themer.js"></script>
+	</head>
+
+	<body>
+		<span class="loading">Loading...</span>
+		<main>
+			<table class="table-responsive table">
+				<thead>
+					<tr>
+						<th>Period 1</th>
+						<th>Period 2</th>
+						<th>Period 3</th>
+						<th>Period 4</th>
+						<th>Period 5</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<p>Subject 1</p>
+							<p>Class 1</p>
+							<p>Teacher 1</p>
+						</td>
+						<td>
+							<p>Subject 2</p>
+							<p>Class 2</p>
+							<p>Teacher 2</p>
+						</td>
+						<td>
+							<p>Subject 3</p>
+							<p>Class 3</p>
+							<p>Teacher 3</p>
+						</td>
+						<td>
+							<p>Subject 4</p>
+							<p>Class 4</p>
+							<p>Teacher 4</p>
+						</td>
+						<td>
+							<p>Subject 5</p>
+							<p>Class 5</p>
+							<p>Teacher 5</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="items"></div>
+			<div class="buttons">
+				<a href="./settings">Settings</a>
+				<a href="./edit">Edit Timetable</a>
+				<a class="logout-btn">Logout</a>
+			</div>
+			<p class="portrait">
+				<br />
+				Just so you know you need to be in landscape mode to view your entire
+				Timetable :)
+			</p>
+			<div id="whole-timetable">
+				<div class="week1">
+					<h4>Week 1</h4>
+					<table class="table-responsive table">
+						<thead>
+							<tr>
+								<th>Day</th>
+								<th>Period 1</th>
+								<th>Period 2</th>
+								<th>Period 3</th>
+								<th>Period 4</th>
+								<th>Period 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Monday</th>
+								<td>
+									<p>Day 1 Period 1 Subject</p>
+									<p>Day 1 Period 1 Class</p>
+									<p>Day 1 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 2 Subject</p>
+									<p>Day 1 Period 2 Class</p>
+									<p>Day 1 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 3 Subject</p>
+									<p>Day 1 Period 3 Class</p>
+									<p>Day 1 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 4 Subject</p>
+									<p>Day 1 Period 4 Class</p>
+									<p>Day 1 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 5 Subject</p>
+									<p>Day 1 Period 5 Class</p>
+									<p>Day 1 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Tuesday</th>
+								<td>
+									<p>Day 2 Period 1 Subject</p>
+									<p>Day 2 Period 1 Class</p>
+									<p>Day 2 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 2 Subject</p>
+									<p>Day 2 Period 2 Class</p>
+									<p>Day 2 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 3 Subject</p>
+									<p>Day 2 Period 3 Class</p>
+									<p>Day 2 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 4 Subject</p>
+									<p>Day 2 Period 4 Class</p>
+									<p>Day 2 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 5 Subject</p>
+									<p>Day 2 Period 5 Class</p>
+									<p>Day 2 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Wednesday</th>
+								<td>
+									<p>Day 3 Period 1 Subject</p>
+									<p>Day 3 Period 1 Class</p>
+									<p>Day 3 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 2 Subject</p>
+									<p>Day 3 Period 2 Class</p>
+									<p>Day 3 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 3 Subject</p>
+									<p>Day 3 Period 3 Class</p>
+									<p>Day 3 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 4 Subject</p>
+									<p>Day 3 Period 4 Class</p>
+									<p>Day 3 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 5 Subject</p>
+									<p>Day 3 Period 5 Class</p>
+									<p>Day 3 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Thursday</th>
+								<td>
+									<p>Day 4 Period 1 Subject</p>
+									<p>Day 4 Period 1 Class</p>
+									<p>Day 4 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 2 Subject</p>
+									<p>Day 4 Period 2 Class</p>
+									<p>Day 4 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 3 Subject</p>
+									<p>Day 4 Period 3 Class</p>
+									<p>Day 4 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 4 Subject</p>
+									<p>Day 4 Period 4 Class</p>
+									<p>Day 4 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 5 Subject</p>
+									<p>Day 4 Period 5 Class</p>
+									<p>Day 4 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Friday</th>
+								<td>
+									<p>Day 5 Period 1 Subject</p>
+									<p>Day 5 Period 1 Class</p>
+									<p>Day 5 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 2 Subject</p>
+									<p>Day 5 Period 2 Class</p>
+									<p>Day 5 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 3 Subject</p>
+									<p>Day 5 Period 3 Class</p>
+									<p>Day 5 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 4 Subject</p>
+									<p>Day 5 Period 4 Class</p>
+									<p>Day 5 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 5 Subject</p>
+									<p>Day 5 Period 5 Class</p>
+									<p>Day 5 Period 5 Teacher</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="week2">
+					<h4>Week 2</h4>
+					<table class="table-responsive table">
+						<thead>
+							<tr>
+								<th>Day</th>
+								<th>Period 1</th>
+								<th>Period 2</th>
+								<th>Period 3</th>
+								<th>Period 4</th>
+								<th>Period 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Monday</th>
+								<td>
+									<p>Day 1 Period 1 Subject</p>
+									<p>Day 1 Period 1 Class</p>
+									<p>Day 1 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 2 Subject</p>
+									<p>Day 1 Period 2 Class</p>
+									<p>Day 1 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 3 Subject</p>
+									<p>Day 1 Period 3 Class</p>
+									<p>Day 1 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 4 Subject</p>
+									<p>Day 1 Period 4 Class</p>
+									<p>Day 1 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 1 Period 5 Subject</p>
+									<p>Day 1 Period 5 Class</p>
+									<p>Day 1 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Tuesday</th>
+								<td>
+									<p>Day 2 Period 1 Subject</p>
+									<p>Day 2 Period 1 Class</p>
+									<p>Day 2 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 2 Subject</p>
+									<p>Day 2 Period 2 Class</p>
+									<p>Day 2 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 3 Subject</p>
+									<p>Day 2 Period 3 Class</p>
+									<p>Day 2 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 4 Subject</p>
+									<p>Day 2 Period 4 Class</p>
+									<p>Day 2 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 2 Period 5 Subject</p>
+									<p>Day 2 Period 5 Class</p>
+									<p>Day 2 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Wednesday</th>
+								<td>
+									<p>Day 3 Period 1 Subject</p>
+									<p>Day 3 Period 1 Class</p>
+									<p>Day 3 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 2 Subject</p>
+									<p>Day 3 Period 2 Class</p>
+									<p>Day 3 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 3 Subject</p>
+									<p>Day 3 Period 3 Class</p>
+									<p>Day 3 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 4 Subject</p>
+									<p>Day 3 Period 4 Class</p>
+									<p>Day 3 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 3 Period 5 Subject</p>
+									<p>Day 3 Period 5 Class</p>
+									<p>Day 3 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Thursday</th>
+								<td>
+									<p>Day 4 Period 1 Subject</p>
+									<p>Day 4 Period 1 Class</p>
+									<p>Day 4 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 2 Subject</p>
+									<p>Day 4 Period 2 Class</p>
+									<p>Day 4 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 3 Subject</p>
+									<p>Day 4 Period 3 Class</p>
+									<p>Day 4 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 4 Subject</p>
+									<p>Day 4 Period 4 Class</p>
+									<p>Day 4 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 4 Period 5 Subject</p>
+									<p>Day 4 Period 5 Class</p>
+									<p>Day 4 Period 5 Teacher</p>
+								</td>
+							</tr>
+							<tr>
+								<th>Friday</th>
+								<td>
+									<p>Day 5 Period 1 Subject</p>
+									<p>Day 5 Period 1 Class</p>
+									<p>Day 5 Period 1 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 2 Subject</p>
+									<p>Day 5 Period 2 Class</p>
+									<p>Day 5 Period 2 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 3 Subject</p>
+									<p>Day 5 Period 3 Class</p>
+									<p>Day 5 Period 3 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 4 Subject</p>
+									<p>Day 5 Period 4 Class</p>
+									<p>Day 5 Period 4 Teacher</p>
+								</td>
+								<td>
+									<p>Day 5 Period 5 Subject</p>
+									<p>Day 5 Period 5 Class</p>
+									<p>Day 5 Period 5 Teacher</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+
+		<footer></footer>
+	</body>
+</html>

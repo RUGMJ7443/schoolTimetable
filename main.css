@@ -1,0 +1,173 @@
+/* Variable Declaration */
+
+html {
+    --primary-color: rgb(255, 245, 233);
+    --primary-text-color: #000000;
+    --secondary-color: rgb(240, 209, 106);
+    --secondary-color-hover: rgb(236, 193, 49);
+    --secondary-text-color: #000000;
+    --secondary-text-color-hover: #3a3939;
+}
+
+body {
+    margin: 0;
+    background: var(--primary-color);
+    color: var(--primary-text-color);
+    min-width: 100vw;
+}
+
+option,
+select,
+input {
+    background: inherit;
+    border-radius: 10px;
+}
+
+.table>thead>tr>th {
+    border-color: var(--primary-text-color);
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table {
+    /* border-top: 1px solid transparent; */
+    border: none;
+}
+
+:not(.item) {
+    color: var(--primary-text-color);
+}
+
+header {
+    z-index: 9999;
+    position: sticky;
+    color: bisque;
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    width: 100% !important;
+    top: 0;
+}
+
+.buttons {
+    cursor: pointer;
+    color: var(--secondary-text-color);
+    display: inline;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+header>span {
+    /* position: sticky; */
+    cursor: pointer;
+    transition: color 1s;
+    margin: 1%;
+    font-size: 1.5em;
+    text-decoration-line: none;
+    margin: 0 auto;
+}
+
+header>span:hover {
+    color: rgb(247, 164, 63);
+}
+
+.items {
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.item {
+    isolation: isolate;
+    margin: 0.5%;
+    border-radius: 5px;
+}
+
+.need {
+    background-color: rgb(22, 196, 22);
+}
+
+.dont-need {
+    background-color: rgb(187, 15, 15);
+}
+
+header>h1 {
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+}
+
+main {
+    margin-top: 2%;
+}
+
+a,
+a:any-link,
+a:link,
+a:visited {
+    text-decoration: none;
+    display: inline-block;
+    margin: 1%;
+    color: var(--secondary-text-color);
+    padding: 1%;
+    background: var(--secondary-color);
+    transition: all 1s;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: var(--secondary-text-color-hover);
+    background: var(--secondary-color-hover);
+}
+
+#whole-timtable {
+    margin-top: 20%;
+}
+
+.loading {
+    animation-name: loading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+    0% {
+        letter-spacing: normal;
+    }
+
+    50% {
+        letter-spacing: 3ch;
+    }
+
+    100% {
+        letter-spacing: normal;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    header>h1 {
+        display: none;
+    }
+
+    /* header>span{
+        float: right;
+        
+    } */
+}
+
+.portrait {
+    display: none;
+}
+
+@media (orientation: portrait) {
+
+    #whole-timetable {
+        display: none;
+    }
+
+    .portrait {
+        display: initial;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<title>Login</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="../main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="../currentURL.js"></script>
+		<script src="./login.js"></script>
+		<script src="../footer.js"></script>
+		<link rel="stylesheet" href="login.css" />
+	</head>
+
+	<body>
+		<a href="../register/">First Time Here? Then Sign Up Here!</a>
+		<main>
+			<form>
+				<input
+					type="text"
+					placeholder="Login id"
+					id="text-input"
+					autocomplete="off"
+					autocorrect="off"
+					autocapitalize="off"
+					spellcheck="false"
+					class="form-control"
+				/>
+				<input
+					type="submit"
+					value="Login"
+					id="submit"
+					class="button-primary form-control"
+				/>
+				<span id="not-found" class="alert-danger"
+					>This user could not be found please make sure you have entered the
+					login id correctly</span
+				>
+			</form>
+		</main>
+		<footer></footer>
+	</body>
+</html>
